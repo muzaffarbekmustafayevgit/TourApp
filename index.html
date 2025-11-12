@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourApp</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Dark/Light mode sozlamalari -->
+  <script>
+    // tailwind.config.js
+    /** @type {import('tailwindcss').Config} */
+    export default {
+      content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+      ],
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            // Dynamic theme colors
+            primary: {
+              green: {
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+              },
+              blue: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+              },
+              purple: {
+                50: '#faf5ff',
+                100: '#f3e8ff',
+                500: '#a855f7',
+                600: '#9333ea',
+                700: '#7c3aed',
+              },
+              red: {
+                50: '#fef2f2',
+                100: '#fee2e2',
+                500: '#ef4444',
+                600: '#dc2626',
+                700: '#b91c1c',
+              },
+              orange: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+              },
+              teal: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+              }
+            }
+          }
+        },
+      },
+      plugins: [
+        function ({ addUtilities, theme }) {
+          const newUtilities = {};
+          const colors = theme('colors.primary');
+
+          Object.keys(colors).forEach(themeName => {
+            newUtilities[`.theme-bg-${themeName}`] = {
+              backgroundColor: colors[themeName][500],
+            };
+            newUtilities[`.theme-text-${themeName}`] = {
+              color: colors[themeName][500],
+            };
+            newUtilities[`.theme-border-${themeName}`] = {
+              borderColor: colors[themeName][500],
+            };
+          });
+
+          addUtilities(newUtilities, ['responsive', 'hover']);
+        }
+      ],
+    }
+  </script>
+
+
+<style>
+  
+</style>
+</body>
+
+</html>
