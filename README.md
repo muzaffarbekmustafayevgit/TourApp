@@ -1,18 +1,116 @@
-# React + Vite
+Albatta, Muzaffar aka. Men sizning **TourApp README** faylingizni ingliz tilida, yaxshilangan va loyihaning barcha tafsilotlarini o‘z ichiga olgan shaklda tayyorlab berdim:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# TourApp
 
-Currently, two official plugins are available:
+**TourApp** is an interactive web application that allows users to search, explore, and view historical places along with their geolocation on a map. The app also supports user accounts, favorite places, and dark/light theme switching.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Technologies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend:** React 18 + Vite  
+- **Styling:** TailwindCSS (via CDN)  
+- **State Management:** React Context (Auth, Theme)  
+- **Routing:** react-router-dom v7  
+- **API Requests:** Axios / Fetch  
+- **Optional:** Mapbox or Google Maps API for place geolocation  
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## ⚡ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **User Account:**
+   - Login / Register
+   - Profile management & favorite places
+
+2. **Historical Places Search:**
+   - Display places in card layout
+   - Image gallery
+   - Map and geolocation
+
+3. **Dark / Light Theme:**
+   - Managed with React Context + persisted in localStorage
+
+4. **Protected Routes:**
+   - Restrict access to certain pages for non-logged-in users
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/muzaffarbekmustafayevgit/TourApp.git
+cd TourApp
+````
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+5. Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📂 Project Structure (Main)
+
+```
+TourApp/
+│
+├── public/
+│   └── images/           # Static images and loader files
+│
+├── src/
+│   ├── assets/           # Icons, images, global CSS
+│   ├── components/       # Navbar, Footer, SearchBar, LocationCard, etc.
+│   ├── context/          # AuthContext and ThemeContext
+│   ├── pages/            # Home, Login, Register, Search, PlaceDetails, Profile
+│   ├── routes/           # AppRouter.jsx
+│   ├── services/         # API requests
+│   ├── hooks/            # useAuth, useTheme
+│   ├── utils/            # Helper functions
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── package.json
+└── tailwind.config.js
+```
+
+---
+
+## 📌 Notes
+
+* **React Compiler** is enabled in this Vite template, which may affect development and build performance.
+* It is recommended to persist dark/light mode and user auth state in **localStorage**.
+* For larger production apps, consider integrating **TypeScript** and ESLint for type-aware linting.
+
+---
+
+## 📚 Useful Links
+
+* [React Official Docs](https://react.dev/)
+* [Vite Official Docs](https://vite.dev/)
+* [TailwindCSS Docs](https://tailwindcss.com/docs)
+* [React Router v7 Docs](https://reactrouter.com/en/main)
+
