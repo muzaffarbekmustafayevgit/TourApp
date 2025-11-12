@@ -1,6 +1,7 @@
 // components/Navbar.jsx
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
+import BackButton from './BackButton';
 
 const Navbar = ({ isDarkMode, toggleTheme, isLoggedIn, onLogin, onLogout }) => {
   return (
@@ -8,7 +9,7 @@ const Navbar = ({ isDarkMode, toggleTheme, isLoggedIn, onLogin, onLogout }) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h2 className="text-2xl font-bold">O'zbekiston Travel</h2>
+         <BackButton/>
           </div>
           
           <div className="hidden md:flex space-x-8">
