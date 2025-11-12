@@ -1,6 +1,3 @@
-Albatta, Muzaffar aka. Men sizning **TourApp README** faylingizni ingliz tilida, yaxshilangan va loyihaning barcha tafsilotlarini o‘z ichiga olgan shaklda tayyorlab berdim:
-
-````markdown
 # TourApp
 
 **TourApp** is an interactive web application that allows users to search, explore, and view historical places along with their geolocation on a map. The app also supports user accounts, favorite places, and dark/light theme switching.
@@ -82,7 +79,6 @@ TourApp/
 ├── src/
 │   ├── assets/           # Icons, images, global CSS
 │   ├── components/       # Navbar, Footer, SearchBar, LocationCard, etc.
-│   ├── context/          # AuthContext and ThemeContext
 │   ├── pages/            # Home, Login, Register, Search, PlaceDetails, Profile
 │   ├── routes/           # AppRouter.jsx
 │   ├── services/         # API requests
